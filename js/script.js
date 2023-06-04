@@ -13,7 +13,7 @@ document.querySelector('#add').onclick = function(){
         var current_tasks = document.querySelectorAll(".delete");
         for(var i=0; i<current_tasks.length; i++){
             current_tasks[i].onclick = function(){
-                this.parentNode.remove().fadeout;
+                this.parentNode.remove();
             
                 }
             }
@@ -26,79 +26,20 @@ document.querySelector('#add').onclick = function(){
                 }
             }
 
-        // var current_tasks = document.querySelectorAll(".checked");
+        // var current_tasks = document.querySelectorAll(".done");
         // for(var i=0; i<current_tasks.length; i++){
         //     current_tasks[i].onclick = function(){
-        //         this.parentNode.className = 'done';
-                    
-        //         }
+        //         if (this.parentNode.className === ".close") {
+        //             this.parentNode.classList.toggle('checked');
+        //             this.innerHTML = "Undo";
+        //           }
+        //         else{
+        //             this.parentNode.classList.toggle('close');
+        //             this.innerHTML = "Done";
+        //         }         
         //     }
+        // }
 
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// FAILED ATTEMPT
-
-
-
-
-// add.addEventListener('click', function(){
-
-//     var li = document.createElement("li");
-//     var inputValue = document.getElementById("myInput").value;
-//     var t = document.createTextNode(inputValue);
-
-
-
-
-// });
-
-// document.querySelector('#push').onclick = function(){
-//     if(document.querySelector('#newtask input').value.length == 0){
-//         alert("Kindly Enter Task Name!!!!")
-//     }
-
-//     else{
-//         document.querySelector('#tasks').innerHTML += `
-//             <div class="task">
-//                 <span id="taskname">
-//                     ${document.querySelector('#newtask input').value}
-//                 </span>
-//                 <button class="delete">
-//                     <i>Delete</i>
-//                 </button>
-//                 <button class="done">
-//                     <i>Done</i>
-//                 </button>
-//             </div>
-//         `;
-
-//         var current_tasks = document.querySelectorAll(".delete");
-//         for(var i=0; i<current_tasks.length; i++){
-//             current_tasks[i].onclick = function(){
-//                 this.parentNode.remove();
-//             }
-//         }
-//     }
-// }
